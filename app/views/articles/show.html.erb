@@ -1,0 +1,16 @@
+<div class="navbar-brand d-flex justify-content-between">
+  <h1><%= link_to "Dorian's miniwiki", articles_path %></h1>
+</div>
+
+<div class="container align-center">
+  <div class="border-bottom my-4">
+    <h2> <%= @article.title %></h2>
+    <span><%= link_to "edit this article", edit_article_path %></span>
+    <span><%= link_to "delete article", article_path(@article), method: :delete %></span>
+  </div>
+
+  <p>
+    <%= @article.content %>
+  </p>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="navbar-brand d-flex justify-content-between">
+  <h1><%= link_to "Dorian's miniwiki", articles_path %></h1>
+  <div>
+  </div>
+</div>
+
+<div class="container align-center">
+<h2> <%= @article.title %> </h2>
+<p> <%= link_to "delete article", article_path(@article), method: :delete %> </p>
+<h2>Edit the article</h2>
+
+<%= simple_form_for(@article) do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :content %>
+<%= f.text_field :content %>
+<%= f.submit %>
+<% end %>
+</div>
